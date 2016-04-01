@@ -18,42 +18,42 @@
     <dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-core</artifactId>
-		<version>4.2.4.RELEASE</version>
+		<version>${dependency.spring.version}</version>
 	</dependency>
     <dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-context</artifactId>
-		<version>4.2.4.RELEASE</version>
+		<version>${dependency.spring.version}</version>
 	</dependency>
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-beans</artifactId>
-		<version>4.2.4.RELEASE</version>
+		<version>${dependency.spring.version}</version>
 	</dependency>
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-web</artifactId>
-		<version>4.2.4.RELEASE</version>
+		<version>${dependency.spring.version}</version>
 	</dependency>
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-webmvc</artifactId>
-		<version>4.2.4.RELEASE</version>
+		<version>${dependency.spring.version}</version>
 	</dependency>
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-jdbc</artifactId>
-		<version>4.2.4.RELEASE</version>
+		<version>${dependency.spring.version}</version>
 	</dependency>
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-aop</artifactId>
-		<version>4.2.4.RELEASE</version>
+		<version>${dependency.spring.version}</version>
 	</dependency>
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-tx</artifactId>
-		<version>4.2.4.RELEASE</version>
+		<version>${dependency.spring.version}</version>
 	</dependency>
 	<dependency>
 		<groupId>c3p0</groupId>
@@ -86,8 +86,19 @@
 		<version>2.4</version>
 		<classifier>jdk15</classifier>
 	</dependency>
+	<dependency>
+		<groupId>org.aspectj</groupId>
+		<artifactId>aspectjrt</artifactId>
+		<version>1.8.4</version>
+	</dependency>
   </dependencies>
-  
+    
+    <properties>
+		<dependency.spring.version>4.2.4.RELEASE</dependency.spring.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.test.jvmargs>-Xmx1024m -Xms128m</maven.test.jvmargs>
+		<maven.compiler.target>1.7</maven.compiler.target>
+	</properties>
   <build>
     <finalName>nb</finalName>
   </build>

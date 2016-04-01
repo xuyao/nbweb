@@ -1,0 +1,83 @@
+body {font-family:"宋体";font-size:12px;color:#000;text-align:center;line-height:1.5;background-color:#fff}
+*{margin:5px 0;padding:0px}
+li {list-style-type:none}
+img {border:0}
+html{scrollbar-face-color:#f4f4f4;scrollbar-highlight-color:#f4f4f4;scrollbar-shadow-color:#ccc;scrollbar-3dlight-color: #ccc;scrollbar-track-color:#efefef;scrollbar-darkshadow-color:#e2f4fe}
+a:link,a:visited,a:active{color:#000;text-decoration:none}
+a:hover {color:#EB4800;text-decoration:none}
+a.lan12:link,a.lan12:visited,a.lan12:active{color:#005AA6}
+a.lan12:hover{color:#E84000}
+.w100{width:100%}.mt5{margin-top:5px}.mt10{margin-top:10px}.mt25{margin-top:25px}.mb30{margin-bottom:30px}
+.box{width:100%; float:left;}
+#top,#left,#floor{float:left}
+#right{float:left; margin-left:20px;}
+#left{width:15%; background-color:#E5EEF7; border-right:#008DD4 1px solid; height:700px}
+#right{width:79%}
+#floor{width:100%; height:30px;background:url(../img/floor_bg.gif) repeat-x scroll left top;}
+#floor ul{float:left; width:99%; color:#fff; text-align:right; margin-top:8px; }
+#mainbox{width:98%}
+.title,.title li,.xuanxiang,.l_page,.xx_info,xx_info li{float:left}
+.title{height:35px; color:#2a2a2a; font-size:16px; text-align:left; font-weight:bold; border-bottom:#ccc 1px dashed;}
+.title li{display:inline; margin: 0 5px;}
+.xuanxiang{height:30px;background:url(/img/xx_bg.gif) repeat-x scroll left top; border-bottom:#cbcbcb 1px solid}
+.l_page{background-color:#D9E0F2; height:25px; text-align:right}
+.xx_info li{display:inline; margin:0 3px;}
+/*list*/
+.listbox{float:left}
+.tablebox{width:99%; margin:auto;}
+table{border-top:#D6DFF7 1px solid; border-right:#D6DFF7 1px solid;}
+td{border-left:#D6DFF7 1px solid; border-bottom:#D6DFF7 1px solid; height:25px; padding-top:5px;}
+.title_bg{background-color:#799AE1; font-weight:bold; color:#fff}
+.colorbg{background-color:#E8F7FE;}
+/*set*/
+.left_nr{float:left}
+.left_nr{width:200px; text-align:left}
+/*top*/
+.head_bg,.h_left,.l_top,.l_topleft,.l_menu{float:left;}
+.h_right,.l_topright,.topright{float:right;}
+.head_bg{height:22px;background:url(../img/header_bg.gif) repeat-x scroll left top; overflow:hidden;}
+.h_left{margin-left:5px; margin-top:5px;}
+.h_right{margin-right:5px; margin-top:5px;}
+.l_top{height:67px;background:url(../img/l_top_bg.gif) repeat-x scroll left top; overflow:hidden; border-bottom:#0f94cc 1px solid;}
+/*left*/
+.l_box ul,.l_box li,.menutopbg,.menutopbg ul,.limenutopbg,.limenutopbg li,.banbentxt{float:left}
+.l_box{width:135px; margin:20px auto auto auto;}
+.menutopbg{width:100%; height:30px;background:url(../img/menutop.gif) no-repeat scroll left top; color:#FFF;}
+.menutopbg ul{width:100%; font-weight:bold; font-size:14px; margin-top:6px;}
+.limenutopbg{width:100%;background:url(../img/limenubg.gif) no-repeat scroll left top; color:#004e98; height:25px;}
+.limenutopbg li{margin-top:4px;margin-left:15px; *margin-left:15px  !important;*margin-left:8px;}
+.banbentxt{width:100%;background:url(../img/limenubgb.gif) no-repeat scroll left top;  height:25px; padding-top:5px;}
+
+/*search*/
+.ser,.ser_tt,.ser_main,.ser_title,.ser_title li,.ser_main_input,.ser_form,.ser_form ul,.ser_form li,.list_form,.list_form ul,.list_form ul li{float:left}
+.serbox{width:535px; margin:auto;}
+.ser_tt{width:150px; height:38px;background:url(../img/ser_ttbg.gif) repeat-x scroll left top; border-left:#9AC3DF 1px solid; border-right:#9AC3DF 1px solid}
+.ser_title{margin-top:4px}
+.ser_title li{display:inline; margin:0 5px; color:#0245AA; font-weight:bold;}
+.ser_main{height:285px; border:#9AC3DF 1px solid; margin-bottom:80px}
+.ser_main_info{width:300px; margin:auto;}
+.ser_main_input{margin-top:60px}
+.ser_form ul{width:100%; height:25px;}
+.ser_form li{display:inline;}
+.selectstyle{width:90px; border:1px #ccc solid; background-color:#fff; height:20px;}
+.datainputa{width:150px; border:1px #809BB8 solid; height:20px; background-color:#EEF3F8}
+.datainputb{width:90px; border:1px #809BB8 solid; height:20px; background-color:#EEF3F8}
+.ser_bt{width:50%; color:#102A53; font-size:14px; text-align:center}
+.ser_input{width:30%; text-align:center}
+.ser_select{width:50%; text-align:center}
+.list_form ul{width:100%; height:20px; margin-top:8px;}
+.list_form li{display:inline; margin:0 3px; color:#102A53; font-size:14px; }
+.btn_adduser {border:0px; background-image:url(../img/btn_add_user.gif);width:90px; cursor:hand; height:25px;}
+
+.handler .button{
+	height: 20px;
+	width:60px;
+	border: 1px solid #DEA03B;
+	background: #FEDC9C;
+	cursor: pointer;
+	overflow:visible;
+}
+
+p{
+	text-align:left;
+}

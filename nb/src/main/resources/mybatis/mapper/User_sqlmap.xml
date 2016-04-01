@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.nb.auth.dao.UserDao">
+    
+    <resultMap type="User" id="userMap">
+		<id property="userId" column="user_id" />
+		<result property="userName" column="username" />
+		<result property="password" column="password" />
+		<result property="status" column="status" />
+	</resultMap>
+	
+	<!--common searchcondtion sql -->
+    <sql id="common_search_sql">
+      <if test="title != null and title != ''">
+        and t.username=#{username}
+      </if>
+      <if test="year != null">
+        and t.password=#{password}
+      </if>
+      <if test="status != null">
+        and t.status=#{status}
+      </if>
+    </sql>
+    
+    <sql id="common_select_sql">
+      select t.user_id,t.username,t.password,t.status
+    </sql>
+    
+    <select id="count" parameterType="userMap" resultType="int">
+    	select count(0)
+    	from t_user t
+    	where 1=1
+		<include refid="common_search_sql"/>
+    </select>
+    
+    
+	
+</mapper>  

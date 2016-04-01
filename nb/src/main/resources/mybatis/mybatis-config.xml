@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">  
+<configuration>  
+    <typeAliases>
+    
+    	<!-- auth -->
+    	<typeAlias alias="User" type="cn.nb.auth.model.User"/>
+	    <typeAlias alias="Group" type="cn.nb.auth.model.Group"/>
+	    <typeAlias alias="Auth" type="cn.nb.auth.model.Auth"/>
+    </typeAliases>  
+    <mappers>
+    
+    	<!-- auth -->
+    	<mapper resource="mybatis/mapper/User_sqlmap.xml" />
+        <mapper resource="mybatis/mapper/Auth_sqlmap.xml" />
+    	<mapper resource="mybatis/mapper/Group_sqlmap.xml" />
+    </mappers>
+</configuration>

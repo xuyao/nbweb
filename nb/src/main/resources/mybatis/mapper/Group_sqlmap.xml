@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.cnnic.imc.dao.AdminDao">
+    
+    <resultMap type="Admin" id="adminMap">
+		<id property="id" column="id" />
+		<result property="username" column="username" />
+		<result property="password" column="password" />
+		<result property="role" column="role" />
+	</resultMap>
+	
+    <select id="getAdmin" parameterType="Admin" resultMap="adminMap">
+		select t.id,t.username,t.password,t.role from imc_admin t where t.username=#{username}
+		and t.password=#{password}
+    </select>
+	
+</mapper>  
