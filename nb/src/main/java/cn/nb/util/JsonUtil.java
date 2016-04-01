@@ -159,7 +159,6 @@ public class JsonUtil{
      * @return
      */
     public static String getJsonString4JavaPOJO(Object javaObj){
-        
         JSONObject json;
         json = JSONObject.fromObject(javaObj);
         return json.toString();

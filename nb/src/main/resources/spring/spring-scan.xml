@@ -13,10 +13,11 @@
        	   http://www.springframework.org/schema/aop
       	   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
       	   
-    <bean name="LoginController" class="cn.nb.web.controller.LoginController"/>
+    <bean name="LoginController" class="cn.nb.admin.controller.LoginController"/>
+	<bean name="AdminController" class="cn.nb.admin.controller.AdminController"/>
 	
 	<!-- 请放置在文件末尾 -->
-	<context:component-scan base-package="cn.nb.web" >
+	<context:component-scan base-package="cn.nb" >
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>

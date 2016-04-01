@@ -8,21 +8,39 @@
     <link rel="stylesheet" type="text/css" href="<%=path %>/themes/default/easyui.css"/>
     <link rel="stylesheet" type="text/css" href="<%=path %>/themes/icon.css"/>
     <link rel="stylesheet" type="text/css" href="<%=path %>/themes/color.css"/>
-    <script type="text/javascript" src="<%=path %>/script/jquery.min.js"></script>
-    <script type="text/javascript" src="<%=path %>/script/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="<%=path %>/js/jquery.min.js"></script>
+    <script type="text/javascript" src="<%=path %>/js/jquery.easyui.min.js"></script>
+    <style type="text/css">
+    #fm{
+        margin:0;
+        padding:10px 30px;
+    }
+    .ftitle{
+        font-size:14px;
+        font-weight:bold;
+        padding:5px 0;
+        margin-bottom:10px;
+        border-bottom:1px solid #ccc;
+    }
+    .fitem{
+        margin-bottom:5px;
+    }
+    .fitem label{
+        display:inline-block;
+        width:80px;
+    }
+    .fitem input{
+        width:160px;
+    }
+</style>
 </head>
 <body>
-    <table id="dg" title="学生列表" class="easyui-datagrid" toolbar="#toolbar">
+    <table id="dg" title="管理员列表" class="easyui-datagrid" toolbar="#toolbar">
         <thead>
             <tr>
-                <th field="sname" width="50">学生姓名</th>
-                <th field="school" width="50">学校</th>
-                <th field="sgender" width="50">性别</th>
-                <th field="sclass" width="50">班级</th>
-                <th field="uname" width="50">家长姓名</th>
-                <th field="uphone" width="50">家长手机</th>
-                <th field="urelt" width="50">关系</th>
-                <th field="status" width="50">状态</th>
+                <th field="adminId" width="50">ID</th>
+                <th field="name" width="50">用户名</th>
+                <th field="password" width="50">密码</th>
             </tr>
         </thead>
     </table>
@@ -139,33 +157,10 @@
         }
     </script>
 </body>
-<style type="text/css">
-    #fm{
-        margin:0;
-        padding:10px 30px;
-    }
-    .ftitle{
-        font-size:14px;
-        font-weight:bold;
-        padding:5px 0;
-        margin-bottom:10px;
-        border-bottom:1px solid #ccc;
-    }
-    .fitem{
-        margin-bottom:5px;
-    }
-    .fitem label{
-        display:inline-block;
-        width:80px;
-    }
-    .fitem input{
-        width:160px;
-    }
-</style>
 </html>
 <script type="text/javascript">
 $('#dg').datagrid({
-	url: '<%=path %>/fw/user/list',
+	url: '<%=path %>/fw/admin/list',
 	saveUrl: '',
 	updateUrl: '',
 	destroyUrl: '',
