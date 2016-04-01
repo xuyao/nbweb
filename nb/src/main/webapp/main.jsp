@@ -35,16 +35,7 @@ window.history.forward(1);
                                <ul>系统管理̬</ul>
                             </div>
                              <div class="limenutopbg">
-                               <li><a href="<%=path %>/fw/teacher/teacher_table.jsp"  target="frame2" class="lan12">教师管理</a></li>
-                            </div>
-                            <div class="limenutopbg">
-                               <li><a href="<%=path %>/fw/student/student_table.jsp"  target="frame2" class="lan12">学生管理</a></li>
-                            </div>	
-                            <div class="limenutopbg">
-                               <li><a href="<%=path %>/fw/class/class_table.jsp"  target="frame2" class="lan12">班级管理</a></li>
-                            </div>
-                            <div class="limenutopbg">
-                               <li><a href="<%=path %>/fw/cms/cms_table.jsp"  target="frame2" class="lan12">学校通知</a></li>
+                               <li><a href="<%=path %>/fw/admin_table.jsp"  target="frame2" class="lan12">登录管理</a></li>
                             </div>
                     </div>
             </div>

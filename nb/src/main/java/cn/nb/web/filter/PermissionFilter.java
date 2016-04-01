@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import cn.nb.web.vo.Admin;
+import cn.nb.web.vo.AdminVo;
 
 
 /**
@@ -32,11 +32,11 @@ public class PermissionFilter implements Filter {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse rep = (HttpServletResponse) response;
 		HttpSession session = req.getSession();
-		Admin admin = (Admin)session.getAttribute("Admin");
+		AdminVo admin = (AdminVo)session.getAttribute("AdminVo");
 		if(admin!=null){
 			chain.doFilter(req, response);
 		}else{
-			rep.sendRedirect("/web/index.jsp");
+			rep.sendRedirect("../index.jsp");
 		}
 	}
 

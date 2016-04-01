@@ -17,28 +17,17 @@ import cn.nb.web.vo.AdminVo;
  * 	@author xuyao
  * */
 @Controller
-@RequestMapping("/")
-public class LoginController extends BaseController{
+@RequestMapping("/fw")
+public class AdminController extends BaseController{
 	
 	@Autowired
 	private AdminService adminService;
 	
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@RequestMapping(value = "/admin", method = RequestMethod.POST)
 	public ModelAndView clist(AdminVo adminVo, HttpServletRequest request, HttpServletResponse response) {
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
 		ModelAndView mav = new ModelAndView();
 //		mav.addObject("list",list);
-		
-		if(adminService.exitAdmin(adminVo)){
-			request.getSession().setAttribute("AdminVo", adminVo);
-			mav.setViewName("main.jsp");
-		}else{
-			request.getSession().setAttribute("AdminVo", null);
-			mav.setViewName("index.jsp");
-		}
-		System.out.println(username+" "+password);
-		//HttpResponse.responseContentTypeJson(response, "");
+		mav.setViewName("/fw/admin_table.jsp");
 		return mav;
 	}
 	

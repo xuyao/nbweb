@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.nb.dao.AdminDao">
+    
+    <resultMap type="Admin" id="adminMap">
+		<id property="adminId" column="admin_id" />
+		<result property="name" column="name" />
+		<result property="password" column="password" />
+	</resultMap>
+	
+	<!--common searchcondtion sql -->
+    <sql id="common_search_sql">
+      <if test="name != null and name != ''">
+        and t.name=#{name}
+      </if>
+      <if test="password != null and password != ''">
+        and t.password=#{password}
+      </if>
+    </sql>
+    
+    <sql id="common_select_sql">
+      select t.admin_id,t.name,t.password
+    </sql>
+    
+    <select id="count" parameterType="Admin" resultType="int">
+    	select count(0)
+    	from t_admin t
+    	where 1=1
+		<include refid="common_search_sql"/>
+    </select>
+	
+</mapper>  

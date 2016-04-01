@@ -27,7 +27,7 @@
 
         <div class="page-container">
             <h1>系统登录</h1>
-            <form action="<%=path %>/login/do" method="post">
+            <form action="<%=path %>/login" method="post">
                 <input type="text" name="username" class="username" placeholder="请输入您的用户名！">
                 <input type="password" name="password" class="password" placeholder="请输入您的用户密码！">
                 <button type="submit" class="submit_button">登录</button>

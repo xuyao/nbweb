@@ -1,6 +1,6 @@
 package cn.nb.web.vo;
 
-public class Admin {
+public class AdminVo {
 
     private String username;
     
