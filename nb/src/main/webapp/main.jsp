@@ -106,7 +106,7 @@
        <iframe name="right" id="rightMain" src="" frameborder="no" scrolling="auto" width="100%" height="auto" allowtransparency="true"></iframe>
     </div>
     <div class="bottom">
-    	<div id="bottom_bg">©Copyright 2016 <a target="_blank"  href="http://www.51per.com/"> <b>51per软件开发团队</b> </a>. All Rights Reserved</div>
+    	<div id="bottom_bg">©Copyright 2016 <a target="_blank"  href="http://www.51per.com/"> <b>51per</b> 软件开发团队</a>. All Rights Reserved</div>
 	</div>
     </body>
 </html>
