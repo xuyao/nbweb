@@ -31,7 +31,7 @@ public class PermissionFilter implements Filter {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse rep = (HttpServletResponse) response;
 		HttpSession session = req.getSession();
-		AdminVo admin = (AdminVo)session.getAttribute("AdminVo");
+		AdminVo admin = (AdminVo)session.getAttribute("Admin");
 		if(admin!=null){
 			chain.doFilter(req, response);
 		}else{

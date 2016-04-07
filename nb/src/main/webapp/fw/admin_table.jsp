@@ -38,7 +38,7 @@
     <table id="dg" title="管理员列表" class="easyui-datagrid" toolbar="#toolbar">
         <thead>
             <tr>
-                <th field="admin_id" width="50">ID</th>
+                <th field="adminId" width="50">ID</th>
                 <th field="name" width="50">用户名</th>
                 <th field="password" width="50">密码</th>
             </tr>

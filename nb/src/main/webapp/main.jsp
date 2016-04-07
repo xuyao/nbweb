@@ -67,7 +67,7 @@
             <div class="help_info">
               <a href="javascript:void(0);" id="hp">&nbsp;</a>
               <a href="javascript:void(0);" id="gy">&nbsp;</a>
-              <a href="<%=path %>/logout.jspa" id="out">&nbsp;</a>
+              <a href="<%=path %>/logout" id="out">&nbsp;</a>
             </div>
             <div class="info_center">123</div>
           </div>
@@ -82,9 +82,9 @@
     <div class="side">
         <div class="st_tree" style="margin:0 auto">
 			<ul>
-				<li>首页
+				<li><b>系统管理</b>
 					<ul>
-						<li><a href="<%=path %>/fw/admin_table.jsp" onclick="setClass(this)" target="right">用户管理</a></li>
+						<li><a href="<%=path %>/fw/admin_table.jsp" onclick="setClass(this)" target="right">管理员管理</a></li>
 					</ul>
 				</li>
 				<!-- 

@@ -25,7 +25,7 @@ public class LoginController extends BaseController{
 	private AdminService adminService;
 	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public ModelAndView clist(AdminVo adminVo, HttpServletRequest request, HttpServletResponse response) {
+	public ModelAndView login(AdminVo adminVo, HttpServletRequest request, HttpServletResponse response) {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		adminVo.setUsername(username);
@@ -34,14 +34,25 @@ public class LoginController extends BaseController{
 		ModelAndView mav = new ModelAndView();
 		
 		if(adminService.exitAdmin(adminVo)){
-			request.getSession().setAttribute("AdminVo", adminVo);
+			request.getSession().setAttribute("Admin", adminVo);
 			mav.setViewName("main.jsp");
+			System.out.println(username+" login!");
 		}else{
-			request.getSession().setAttribute("AdminVo", null);
+			request.getSession().setAttribute("Admin", null);
 			mav.setViewName("index.jsp");
 		}
-		System.out.println(username+" login!");
 		return mav;
 	}
+	
+	
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public ModelAndView logout(AdminVo adminVo, HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView mav = new ModelAndView();	
+		if(request.getSession().getAttribute("Admin")!=null)
+				request.getSession().removeAttribute("Admin");
+		mav.setViewName("index.jsp");
+		return mav;
+	}
+	
 	
 }
