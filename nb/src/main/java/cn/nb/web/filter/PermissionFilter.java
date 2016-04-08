@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import cn.nb.admin.vo.AdminVo;
+import cn.nb.admin.model.Admin;
 
 /**
  * 接口访问权限限制
@@ -31,7 +31,7 @@ public class PermissionFilter implements Filter {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse rep = (HttpServletResponse) response;
 		HttpSession session = req.getSession();
-		AdminVo admin = (AdminVo)session.getAttribute("Admin");
+		Admin admin = (Admin)session.getAttribute("Admin");
 		if(admin!=null){
 			chain.doFilter(req, response);
 		}else{

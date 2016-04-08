@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import cn.nb.admin.model.Admin;
 import cn.nb.admin.res.AdminListResponse;
 import cn.nb.admin.service.AdminService;
-import cn.nb.admin.vo.AdminVo;
 import cn.nb.base.http.HttpResponse;
 import cn.nb.base.http.Page;
 import cn.nb.util.JsonUtil;
@@ -32,12 +31,12 @@ public class AdminController extends BaseController{
 	
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public void list(Page page, HttpServletRequest request, HttpServletResponse response) {
-		AdminListResponse tlres = new AdminListResponse();
-		AdminVo adminVo = new AdminVo();
-		List<Admin> list = adminService.list(adminVo);
-		tlres.setRows(list);
-		tlres.setTotal(1);
-		HttpResponse.responseContentTypeJson(response, JsonUtil.getJsonString4JavaPOJO(tlres));
+		AdminListResponse ares = new AdminListResponse();
+		Admin admin = new Admin();
+		List<Admin> list = adminService.list(admin);
+		ares.setRows(list);
+		ares.setTotal(1);
+		HttpResponse.responseContentTypeJson(response, JsonUtil.getJsonString4JavaPOJO(ares));
 	}
 
 	
