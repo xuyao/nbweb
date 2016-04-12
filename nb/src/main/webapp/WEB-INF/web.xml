@@ -46,6 +46,15 @@
 	  <url-pattern>/</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>validateCodeServlet</servlet-name>
+		<servlet-class>cn.nb.validcode.servlet.ValidateCodeServlet</servlet-class>
+	</servlet>	
+	<servlet-mapping>
+		<servlet-name>validateCodeServlet</servlet-name>
+		<url-pattern>*.images</url-pattern>
+	</servlet-mapping>
+	
 	<filter>
 		<filter-name>springCharacterEncodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
