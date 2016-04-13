@@ -2,9 +2,9 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">  
 <configuration>
     <typeAliases>
+    	<!-- 
 	    <typeAlias alias="Admin" type="cn.nb.admin.model.Admin"/>
+	     -->
+	     <typeAlias alias="User" type="cn.nb.user.model.User"/>
     </typeAliases>
-    <mappers>
-    	<mapper resource="mybatis/mapper/Admin_sqlmap.xml" />
-    </mappers>
 </configuration>
