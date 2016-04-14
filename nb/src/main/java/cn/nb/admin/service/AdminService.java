@@ -32,4 +32,18 @@ public class AdminService {
 		return adminDao.count(admin);
 	}
 	
+	
+	public void save(Admin admin){
+		adminDao.save(admin);
+	}
+	
+	
+	public void update(Admin admin){
+		adminDao.update(admin);
+	}
+	
+	public void delete(Admin admin){
+		adminDao.delete(admin);
+	}
+	
 }

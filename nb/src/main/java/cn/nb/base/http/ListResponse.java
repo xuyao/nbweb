@@ -1,21 +1,20 @@
-package cn.nb.admin.res;
+package cn.nb.base.http;
 
 import java.util.List;
 
-import cn.nb.admin.model.Admin;
 import cn.nb.base.http.BaseResponse;
 
-public class AdminListResponse extends BaseResponse{
+public class ListResponse<T> extends BaseResponse{
 
-	List<Admin> rows;
+	List<T> rows;
 	
 	int total;
 	
-	public List<Admin> getRows() {
+	public List<T> getRows() {
 		return rows;
 	}
 
-	public void setRows(List<Admin> rows) {
+	public void setRows(List<T> rows) {
 		this.rows = rows;
 	}
 

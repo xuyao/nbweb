@@ -12,4 +12,10 @@ public interface AdminDao {
 	
 	public List<Admin> search(Admin admin);
 	
+	public void save(Admin admin);
+	
+	public void update(Admin admin);
+	
+	public void delete(Admin admin);
+	
 }
