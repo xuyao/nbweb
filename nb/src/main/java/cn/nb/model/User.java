@@ -1,4 +1,4 @@
-package cn.nb.user.model;
+package cn.nb.model;
 
 public class User {
 

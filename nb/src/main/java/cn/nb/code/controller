@@ -16,7 +16,7 @@ import cn.nb.base.http.HttpResponse;
 import cn.nb.base.http.ListResponse;
 import cn.nb.base.http.Page;
 import cn.nb.util.JsonUtil;
-import cn.nb.web.controller.BaseController;
+import cn.nb.base.http.BaseController;
 
 /**
  * 	@author xuyao

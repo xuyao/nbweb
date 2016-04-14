@@ -1,4 +1,4 @@
-package cn.nb.admin.model;
+package cn.nb.model;
 
 public class Admin {
 

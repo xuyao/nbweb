@@ -1,9 +1,9 @@
-package cn.nb.admin.dao;
+package cn.nb.dao;
 
 import java.util.List;
 
-import cn.nb.admin.model.Admin;
 import cn.nb.base.annotation.MybatisMapper;
+import cn.nb.model.Admin;
 
 @MybatisMapper
 public interface AdminDao {

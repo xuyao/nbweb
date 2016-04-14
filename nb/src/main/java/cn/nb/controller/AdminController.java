@@ -1,4 +1,4 @@
-package cn.nb.admin.controller;
+package cn.nb.controller;
 
 import java.util.List;
 
@@ -10,13 +10,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import cn.nb.admin.model.Admin;
-import cn.nb.admin.service.AdminService;
+import cn.nb.base.http.BaseController;
 import cn.nb.base.http.HttpResponse;
-import cn.nb.base.http.Page;
 import cn.nb.base.http.ListResponse;
+import cn.nb.base.http.Page;
+import cn.nb.model.Admin;
+import cn.nb.service.AdminService;
 import cn.nb.util.JsonUtil;
-import cn.nb.web.controller.BaseController;
 
 
 /**

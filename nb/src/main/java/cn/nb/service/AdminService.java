@@ -1,12 +1,12 @@
-package cn.nb.admin.service;
+package cn.nb.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cn.nb.admin.dao.AdminDao;
-import cn.nb.admin.model.Admin;
+import cn.nb.dao.AdminDao;
+import cn.nb.model.Admin;
 
 @Service
 public class AdminService {

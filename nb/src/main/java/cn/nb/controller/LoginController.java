@@ -1,4 +1,4 @@
-package cn.nb.admin.controller;
+package cn.nb.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import cn.nb.admin.model.Admin;
-import cn.nb.admin.service.AdminService;
-import cn.nb.web.controller.BaseController;
+import cn.nb.base.http.BaseController;
+import cn.nb.model.Admin;
+import cn.nb.service.AdminService;
 
 /**
  * 	登录controller

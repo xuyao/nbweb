@@ -13,8 +13,8 @@
        	   http://www.springframework.org/schema/aop
       	   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
       	   
-    <bean name="LoginController" class="cn.nb.admin.controller.LoginController"/>
-	<bean name="AdminController" class="cn.nb.admin.controller.AdminController"/>
+    <bean name="LoginController" class="cn.nb.controller.LoginController"/>
+	<bean name="AdminController" class="cn.nb.controller.AdminController"/>
 	
 	<!-- 请放置在文件末尾 -->
 	<context:component-scan base-package="cn.nb" >

@@ -40,13 +40,7 @@ public class PackageUtil {
 	}
 	
 	
-	public static void ifPackageNotExistCreate(String modelPackage, String type){
-		modelPackage = modelPackage.substring(0, modelPackage.lastIndexOf("."));
-		String daoPackage = modelPackage.substring(0, modelPackage.lastIndexOf("."))
-				+"."+type+".";
-		String pathFile = System.getProperty("user.dir") + File.separator + 
-				"src" + File.separator + "main"+ File.separator +"java" + File.separator +
-				daoPackage.replaceAll("\\.", "\\\\");
+	public static void ifPackageNotExistCreate(String pathFile){
 		File f = new File(pathFile);
 		if(!f.exists()){
 			try {

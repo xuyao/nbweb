@@ -1,4 +1,4 @@
-package cn.nb.web.controller;
+package cn.nb.base.http;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

@@ -1,4 +1,4 @@
-package cn.nb.web.filter;
+package cn.nb.base.servlet;
 
 import java.io.IOException;
 
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import cn.nb.admin.model.Admin;
+import cn.nb.model.Admin;
 
 /**
  * 接口访问权限限制

@@ -19,10 +19,17 @@ public class CodeGenMain {
 				genCode(modelClass, "dao");//生成dao
 				genCode(modelClass, "service");//生成dao
 				genCode(modelClass, "controller");//生成dao
+				genMybatisXml();//生成mybatis配置文件
 			}
 		}catch(Exception e){
 			e.printStackTrace();
 		}
+	}
+	
+	
+	private static void genMybatisXml(){
+		
+		
 	}
 	
 	
@@ -31,10 +38,12 @@ public class CodeGenMain {
 		String thislassName = PackageUtil.getThisClass(modelClass, type);
 		String pathFile = System.getProperty("user.dir") + File.separator + 
 				"src" + File.separator + "main"+ File.separator +"java" + File.separator +
-				thislassName.replaceAll("\\.", "\\\\");
-		PackageUtil.ifPackageNotExistCreate(modelClass, type);
+				"cn" + File.separator + "nb" + File.separator + type + File.separator;
+//				thislassName.replaceAll("\\.", "\\\\");
 		
-		File daoFile = new File(pathFile+".java");
+		PackageUtil.ifPackageNotExistCreate(pathFile);
+		
+		File daoFile = new File(pathFile + PackageUtil.getThisClassName(modelClass, type) + ".java");
 		try {
 			daoFile.createNewFile();
 			String content = FileUtils.readFileToString(

@@ -1,4 +1,4 @@
-package cn.nb.validcode.servlet;
+package cn.nb.base.servlet;
 
 import java.io.ByteArrayInputStream;
 import java.awt.*;
