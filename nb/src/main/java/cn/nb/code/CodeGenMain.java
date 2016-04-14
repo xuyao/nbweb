@@ -71,7 +71,6 @@ public class CodeGenMain {
 		
 	}
 	
-	
 	private static void getName(Class clazz){
 		Field[] field = clazz.getDeclaredFields();
 		for(int i=0;i<field.length;i++){
