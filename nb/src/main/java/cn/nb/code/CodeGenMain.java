@@ -15,11 +15,11 @@ public class CodeGenMain {
 		try{
 			for(String modelClass : list){
 				Class clazz = Class.forName(modelClass);
-				getName(clazz);
-				genCode(modelClass, "dao");//生成dao
-				genCode(modelClass, "service");//生成dao
-				genCode(modelClass, "controller");//生成dao
-				genMybatisXml();//生成mybatis配置文件
+//				getName(clazz);
+//				genCode(modelClass, "dao");//生成dao
+//				genCode(modelClass, "service");//生成dao
+//				genCode(modelClass, "controller");//生成dao
+				genMybatisXml(modelClass, clazz);//生成mybatis配置文件
 			}
 		}catch(Exception e){
 			e.printStackTrace();
@@ -27,8 +27,28 @@ public class CodeGenMain {
 	}
 	
 	
-	private static void genMybatisXml(){
+	private static void genMybatisXml(String modelClass, Class clazz){
+		Field[] field = clazz.getDeclaredFields();
+		String modelName = PackageUtil.getClassName(modelClass);
+		String pathFile = System.getProperty("user.dir") + File.separator + 
+				"src" + File.separator + "main"+ File.separator +"resources" + File.separator +
+				"mybatis" + File.separator + "mapper" + File.separator + modelName + "_sqlmap.xml";
+		File xmlFile = new File(pathFile);
+		try{
+		if(!xmlFile.exists())
+			xmlFile.createNewFile();
 		
+		String content = FileUtils.readFileToString(
+				new File(CodeGenMain.class.getResource("").getFile() + "sqlmap"));
+		content = content.replaceAll("\\$daoClass", PackageUtil.getThisClass(modelClass, "dao"));
+		content = content.replaceAll("\\$modelName", PackageUtil.getClassName(modelClass));
+		content = content.replaceAll("\\$modelObj", PackageUtil.getClassName(modelClass).toLowerCase());
+		content = content.replaceAll("\\$resultMap", XmlTypeAliasUtil.genResultMap(field));
+		
+		FileUtils.writeStringToFile(xmlFile, content);
+		} catch(Exception e){
+			e.printStackTrace();
+		}
 		
 	}
 	
@@ -74,7 +94,7 @@ public class CodeGenMain {
 	private static void getName(Class clazz){
 		Field[] field = clazz.getDeclaredFields();
 		for(int i=0;i<field.length;i++){
-			System.out.println(field[i].getName());
+				System.out.println(field[i].getName() + " " + field[i].getType().getName());
 		}
 		System.out.println("========================");
 	}

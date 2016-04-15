@@ -1,7 +1,10 @@
 package cn.nb.model;
 
+import cn.nb.base.annotation.Id;
+
 public class User {
 
+	@Id
 	public String name;
 	
 	public String age;

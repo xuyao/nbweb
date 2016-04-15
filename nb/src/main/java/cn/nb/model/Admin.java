@@ -1,7 +1,9 @@
 package cn.nb.model;
+import cn.nb.base.annotation.Id;
 
 public class Admin {
 
+	@Id
 	private Integer adminId;
 	
 	private String name;
