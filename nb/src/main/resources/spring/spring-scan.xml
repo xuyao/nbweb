@@ -12,9 +12,8 @@
       	   http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
        	   http://www.springframework.org/schema/aop
       	   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
-      	   
-    <bean name="LoginController" class="cn.nb.controller.LoginController"/>
-	<bean name="AdminController" class="cn.nb.controller.AdminController"/>
+   
+	<context:component-scan base-package="cn.nb.controller" />   	   
 	
 	<!-- 请放置在文件末尾 -->
 	<context:component-scan base-package="cn.nb" >
