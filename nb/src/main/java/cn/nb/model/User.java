@@ -1,15 +1,12 @@
 package cn.nb.model;
 
-import cn.nb.base.annotation.Id;
-
 public class User {
 
-	@Id
-	public String name;
+	private String name;
 	
-	public String age;
+	private String age;
 	
-	public String address;
+	private String address;
 
 	public String getName() {
 		return name;
